@@ -3,7 +3,6 @@ from utils import detect_programming_language
 def make_code_comments(userData: dict):
     code_commented_map = {}
 
-  
     if userData.Language == "golang":
         lang_type = detect_programming_language(userData.CodeBody)
         if lang_type == "Go":
