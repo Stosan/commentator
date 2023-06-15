@@ -4,7 +4,7 @@ key="WggnOxa5VgqEAWlvXLDDaod0Eq4MUPnEqUCwhqhIze6AR5GbxndNTmL_QUJvJPCnlWbadA."
 
 def RunBard(langtype: str, query: str):
     try:
-        PROMPT_KEY=f"PROMPT:Add inline comprehensive commenting to this {langtype} code and do nothing else:"
+        PROMPT_KEY=f"PROMPT:Add inline comprehensive commenting to this {langtype} code, add a detailed explanation of how the function works as comment at the top of the function and do nothing else:"
         code = '''
         func DetectProgrammingLanguage(function string) string {
             // Convert the function to lowercase for case-insensitive comparison
