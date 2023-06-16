@@ -1,4 +1,4 @@
-### Commentator
+# Commentator
 Commentator is an AI-powered code commentator application designed to assist developers in generating comments for their code automatically. By leveraging generative AI, Commentator utilizes AI techniques to analyze code snippets and provide insightful comments, allowing developers to focus more on writing code logic and reducing the effort required for documenting and explaining their code.
 
   <p align="center">
@@ -12,7 +12,7 @@ Commentator is an AI-powered code commentator application designed to assist dev
 
 
 ![Commentator Logo](https://github.com/Stosan/commentator/blob/main/src/static/commentator-logo.png)
-#### Features
+# Features
 - Automatic code commenting: Commentator uses the generative AI to write comments for code snippets, providing meaningful insights and explanations for developers.
 
 - Multiple programming languages: Commentator supports various programming languages, including Python, Go, and JavaScript, allowing developers from different language communities to benefit from the code commenting capabilities.
@@ -20,7 +20,7 @@ Commentator is an AI-powered code commentator application designed to assist dev
 - User-friendly interface: The application provides a user-friendly interface where developers can input their code snippets and receive generated comments quickly and effortlessly.
 
 
-#### Getting Started
+# Getting Started
 To get started with Commentator, follow these steps:
 
 - Clone the repository: `git clone https://github.com/Stosan/commentator.git`
@@ -34,7 +34,7 @@ To get started with Commentator, follow these steps:
 - Access the application in your browser at http://localhost:8000.
 
 
-#### Usage
+# Usage
 - Open the Commentator application in your browser.
 
 - Select the desired programming language from the dropdown menu.
@@ -48,7 +48,7 @@ To get started with Commentator, follow these steps:
 - Copy the comments or use them as needed in your code documentation.
 
 
-#### 🤝 Contributing
+# 🤝 Contributing
 Contributions to Commentator are welcome! If you encounter any issues or have ideas for enhancements, feel free to submit a pull request or open an issue in the GitHub repository.
 
 When contributing, please adhere to the following guidelines:
@@ -59,7 +59,7 @@ When contributing, please adhere to the following guidelines:
 - Test your changes thoroughly before submitting a pull request.
 
 
-### Show your support
+# Show your support
 
 Give a ⭐️ if this project helped you!
 
