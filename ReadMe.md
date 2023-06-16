@@ -1,8 +1,8 @@
 ### Commentator
-Commentator is an AI-powered code commentator application designed to assist developers in generating comments for their code automatically. By leveraging the BARD API, Commentator utilizes generative AI techniques to analyze code snippets and provide insightful comments, allowing developers to focus more on writing code logic and reducing the effort required for documenting and explaining their code.
+Commentator is an AI-powered code commentator application designed to assist developers in generating comments for their code automatically. By leveraging generative AI, Commentator utilizes AI techniques to analyze code snippets and provide insightful comments, allowing developers to focus more on writing code logic and reducing the effort required for documenting and explaining their code.
 ![Commentator Logo](https://github.com/Stosan/commentator/blob/main/src/static/commentator-logo.png)
 #### Features
-- Automatic code commenting: Commentator uses the BARD API to generate comments for code snippets, providing meaningful insights and explanations for developers.
+- Automatic code commenting: Commentator uses the generative AI to write comments for code snippets, providing meaningful insights and explanations for developers.
 
 - Multiple programming languages: Commentator supports various programming languages, including Python, Go, and JavaScript, allowing developers from different language communities to benefit from the code commenting capabilities.
 
@@ -12,7 +12,7 @@ Commentator is an AI-powered code commentator application designed to assist dev
 #### Getting Started
 To get started with Commentator, follow these steps:
 
-- Clone the repository: git clone https://github.com/your-username/commentator.git
+- Clone the repository: git clone https://github.com/Stosan/commentator.git
 
 - Install the required dependencies: pip install -r requirements.txt
 
@@ -49,8 +49,6 @@ When contributing, please adhere to the following guidelines:
 
 
 #### Acknowledgments
-Commentator utilizes the BARD API (https://bard-api.example.com) for the AI-powered code commenting functionality. Special thanks to the BARD team for providing this powerful API.
-
 The development of Commentator was inspired by the need to streamline code documentation and make it more efficient for developers.
 
 #### Contact
