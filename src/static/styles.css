@@ -149,9 +149,10 @@ cursor: pointer;
   }
   .processingNotification{
     display:none; 
-    color: #b64d01; 
-    position: absolute; 
-    left: 40%; 
+    color: #0868a3; 
+    position: relative; 
+    left: 30%;
+    font-size: 0.7rem;
     margin-top: 10px;
   }
   @media (max-width: 767px) {
@@ -197,18 +198,22 @@ cursor: pointer;
   .code-container {
     white-space: pre-line;
     text-align: left;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    overflow: scroll;
 }
   pre{
     background-color: #f1f1f1 !important;
     max-width: inherit;
-   
+    color: #777777 !important; 
     margin:  0!important; 
     font-size: 0.7rem !important;
   }
-  code{
-    color: #777777 !important; 
-    
+
+  .code {
+    white-space: pre-wrap;
   }
+  
   @media (max-width: 767px) {
     .code {
       font-size: 9px;

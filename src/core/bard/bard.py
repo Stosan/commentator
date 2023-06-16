@@ -8,7 +8,7 @@ def RunBard(langtype: str, query: str):
         code = f'''{query}'''
         PROMPT=f"{PROMPT_KEY}{code}"
         token = key
-        bard = Bard(token=token, timeout=10)
+        bard = Bard(token=token, timeout=30)
         res = bard.get_answer(PROMPT)['content']
         return res,None
     except Exception as e:

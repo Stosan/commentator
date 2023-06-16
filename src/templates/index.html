@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Commentator by Sam Ayo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Include a Prism.js theme (e.g., Tomorrow Night theme) -->
-  <link rel="stylesheet" href="{{ url_for('static', path='prism.css') }}">
+
+  <!-- <link rel="stylesheet" href="{{ url_for('static', path='prism.css') }}"> -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
 </head>
 
@@ -19,7 +20,7 @@
 
     <div class="left">
       <h4>*Commentator supports only functions</h4>
-      <div id="processingNotification" class="processingNotification">Processing with server...</div>
+      <div id="processingNotification" class="processingNotification"></div>
      
       <form class="form" id="commentSubmit" method="post" action="/api/v1/generate-comments">
         <div class="wrap-1" style="display: inline-flex;">
@@ -38,15 +39,17 @@
         </div>
         <div class="wrap-1">
           <div for="code" class="text name">Code:</div>
-          <textarea id="code" name="code"></textarea>
+          <textarea id="code_body" placeholder="a sample could be: func (cm *CodeCommentData) MakeCodeComments(c echo.Context) error {
+
+          }"></textarea>
         </div>
         <br>
 
         <div class="svg-wrapper">
           <svg height="40" width="320" xmlns="http://www.w3.org/2000/svg">
             <rect class="shape" height="40" width="320" />
-            <div class="text-submit name">Submit</div>
-            <input id="comment-submit" type="submit" value="Submit" class="text overlay" tabindex=3>
+            <div class="text-submit name">Generate Comments</div>
+            <input id="comment-submit" type="submit" value="Generate Comments" class="text overlay" tabindex=3>
           </svg>
         </div>
       </form>
@@ -56,38 +59,18 @@
       <div class="eula">Commentator provides you AI generated comments on your code. <br> So you can focus
         more on writing awesome logics!</div>
         <div class="code-container">
-        <pre><code ></code></pre>
-        <!-- <pre><code>// This function takes a CodeCommentData object and an echo.Context object and
-// generates a list of comments for the code.
-          func (cm *CodeCommentData) MakeCodeComments(c echo.Context) error {
-          
-            // First, get the code from the echo.Context object.
-            code := c.Get("code")
-          
-            // Next, parse the code and generate a list of comments. The comments are
-            // generated based on the structure of the code.
-            comments := []string{}
-            for token in code.split():
-              if token.startswith("//"):
-                comments.append(token)
-          
-            // Finally, return the list of comments.
-            return comments
-          }</code></pre> -->
-
+        <pre><code id="code-board" class="code"></code></pre> 
       </div>
 
     </div>
   </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
-  <script src="{{ url_for('static', path='script.js') }}"></script>
-  <script src="{{ url_for('static', path='prism.js') }}"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
+  <!-- <script>
     // Apply syntax highlighting to all code blocks
     Prism.highlightAll();
-  </script>
+  </script> -->
   <!-- <script src="{{ url_for('static', path='/js/computelogic.js') }}"></script> -->
   <script>
 
@@ -100,10 +83,11 @@
         // Prevent default form submission behavior
         event.preventDefault();
         // Get the color input value
-        var code = $("#code").val();
+        var code = $("#code_body").val();
         var language = $("#language").val();
         let payloaddata = { 'code_body': code, "language": language }
         // Show processing notification
+        $('#processingNotification').text("Cooking for you IDAN, just chill...");
         $('#processingNotification').show();
         // Make a POST request to the API endpoint
         $.ajax({
@@ -111,33 +95,25 @@
           type: "POST",
           data: JSON.stringify(payloaddata),
           beforeSend: function (xhr) {
-            xhr.setRequestHeader("Authorization", "Basic " + btoa("risdataengr:r!sadm!n0000#"));
+            xhr.setRequestHeader("Authorization", "Basic " + btoa("kokomis3:adm|n0000#"));
           },
           contentType: 'application/json',
           success: function (data) {
-            console.log(data, language)
-            // Add language class to the <code> tag
-            $(".code").addClass(`language-${language}`);
             // Update the <code> tag with the response
             $("#code-board").text(data);
-
+            // Add language class to the <code> tag
+            $("#code-board").addClass(`language-${language}`);
             // Hide processing notification
             $('#processingNotification').hide();
           },
           error: function (xhr, textStatus, errorThrown) {
             // Handle errors here
-            console.log('Error:', textStatus);
-            console.log('Error thrown:', errorThrown);
-            if (xhr.status == 422) {
-              // Handle 422 error here
-              alert(`${textStatus}`);
+            if (xhr.status == 400) {
+              // Handle 400 error here
+              $('#processingNotification').text(`IDAN, the server said: ${xhr.responseText} o`);
+              $('#processingNotification').show();
             }
-            if (xhr.status == 306) {
-              // Handle 306 error here
-              alert("colour has already been processed");
-            }
-            // Hide processing notification
-            $('#processingNotification').hide();
+            
           }
         });
       });
@@ -145,7 +121,10 @@
 
 
   </script>
-
+  <script src="{{ url_for('static', path='script.js') }}"></script>
+  <!-- <script src="{{ url_for('static', path='prism.js') }}"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </body>
 
 </html>
