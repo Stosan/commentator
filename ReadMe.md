@@ -1,6 +1,6 @@
 ### Commentator
 Commentator is an AI-powered code commentator application designed to assist developers in generating comments for their code automatically. By leveraging the BARD API, Commentator utilizes generative AI techniques to analyze code snippets and provide insightful comments, allowing developers to focus more on writing code logic and reducing the effort required for documenting and explaining their code.
-![Commentator Logo](/src/static/commentator-image.png)
+![Commentator Logo](https://github.com/Stosan/commentator/blob/main/src/static/commentator-logo.png)
 #### Features
 - Automatic code commenting: Commentator uses the BARD API to generate comments for code snippets, providing meaningful insights and explanations for developers.
 
