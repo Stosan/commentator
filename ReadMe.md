@@ -12,7 +12,7 @@ Commentator is an AI-powered code commentator application designed to assist dev
 #### Getting Started
 To get started with Commentator, follow these steps:
 
-- Clone the repository: git clone https://github.com/Stosan/commentator.git
+- Clone the repository: `git clone https://github.com/Stosan/commentator.git`
 
 - Install the required dependencies: pip install -r requirements.txt
 
