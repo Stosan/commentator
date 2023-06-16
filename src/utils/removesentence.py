@@ -1,52 +1,21 @@
-def remove_first_go_paragraph(sentence):
+def remove_first_paragraph(sentence, language):
     paragraphs = sentence.split('\n\n')  # Split the sentence into paragraphs
     if len(paragraphs) > 1:
         updated_sentence = '\n\n'.join(paragraphs[1:])  # Remove the first paragraph
-        # Find the index of the first occurrence of "```go"
-        first_occurrence = updated_sentence.find("```go")
 
-        # Find the index of the next newline character after the first occurrence
-        next_newline = updated_sentence.find("\n", first_occurrence)
+        # Find the index of the first occurrence of the language code block
+        code_block_start = updated_sentence.find(f"```{language}")
 
-        # Remove the first line containing "```go"
-        updated_sentence = updated_sentence[next_newline + 1:]
+        if code_block_start != -1:
+            # Find the index of the next newline character after the code block start
+            next_newline = updated_sentence.find("\n", code_block_start)
+
+            # Remove the first line containing the language code block
+            updated_sentence = updated_sentence[next_newline + 1:]
+
         return updated_sentence
     else:
         return sentence
-    
-def remove_first_py_paragraph(sentence):
-    paragraphs = sentence.split('\n\n')  # Split the sentence into paragraphs
-    if len(paragraphs) > 1:
-        updated_sentence = '\n\n'.join(paragraphs[1:])  # Remove the first paragraph
-        # Find the index of the first occurrence of "```go"
-        first_occurrence = updated_sentence.find("```python")
-
-        # Find the index of the next newline character after the first occurrence
-        next_newline = updated_sentence.find("\n", first_occurrence)
-
-        # Remove the first line containing "```go"
-        updated_sentence = updated_sentence[next_newline + 1:]
-        return updated_sentence
-    else:
-        return sentence
-    
-    
-def remove_first_js_paragraph(sentence):
-    paragraphs = sentence.split('\n\n')  # Split the sentence into paragraphs
-    if len(paragraphs) > 1:
-        updated_sentence = '\n\n'.join(paragraphs[1:])  # Remove the first paragraph
-        # Find the index of the first occurrence of "```javascript"
-        first_occurrence = updated_sentence.find("```javascript")
-
-        # Find the index of the next newline character after the first occurrence
-        next_newline = updated_sentence.find("\n", first_occurrence)
-
-        # Remove the first line containing "```javascript"
-        updated_sentence = updated_sentence[next_newline + 1:]
-        return updated_sentence
-    else:
-        return sentence
-    
 
 def remove_last_paragraph(sentence):
     paragraphs = sentence.split('\n\n')  # Split the sentence into paragraphs
