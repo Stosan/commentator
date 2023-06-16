@@ -3,6 +3,7 @@ from src.api.router.api_route import router as api_router
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import uvicorn
+from src.config import appconfig
 app = FastAPI()
 
 # Mount the user router under the /users path
@@ -17,5 +18,5 @@ def index(request: Request):
 
 
 if __name__ == "__main__":
-    uvicorn.run("src.main:app",host="0.0.0.0",port=8000)
+    uvicorn.run("src.main:app",host="0.0.0.0",port=appconfig.app_port)
 
