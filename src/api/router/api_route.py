@@ -5,7 +5,7 @@ router = APIRouter()
 
 
 
-@router.post("/create-code-comments")
+@router.post("/generate-comments")
 def create_code_comment(user_data: dict):
     resp=make_code_comments(user_data)
     return Response(content=resp["result"], status_code=200)

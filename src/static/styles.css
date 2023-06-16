@@ -1,4 +1,230 @@
-.modal {
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+::selection {
+    background: #2D2F36;
+  }
+  ::-webkit-selection {
+    background: #2D2F36;
+  }
+  ::-moz-selection {
+    background: #2D2F36;
+  }
+html, body {
+    background: #2D2F36;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Oswald' sans-serif;
+}
+.container {
+    display: flex;
+    height: 90vh;
+    margin: 0 auto;
+    width: 80vw;
+    font-family: 'oswald';
+  }
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+      height: 630px;
+      width: 320px;
+    }
+  }
+
+
+/*************left side*****/
+
+  .left {
+    background: white;
+    height: calc(100% - 40px);
+    top: 20px;
+    position: relative;
+    width: 50%; padding:15px;
+  }
+ 
+  .left >h4{
+    text-align: center;
+   
+  }
+  .form {
+margin: 0 auto;
+padding: 5px 4px 7px 56px;
+  }
+  textarea {
+    resize: none;
+    font-size: 0.7rem;
+    height: calc(100vh / 2);
+    width: 90%;
+  }
+  textarea:focus {
+    border-color: red;
+  }
+  .wrap-1{
+    margin-top: 10px;
+    font-size: 0.7rem;
+  }
+ 
+  .text {
+    font-family: 'Oswald' sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    color: #000000;
+  }
+  .svg-wrapper {
+    position: relative;
+    top: 15%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 380px;  
+    cursor: pointer;
+    height: 20px;
+    margin-bottom: 70px;
+  }
+ 
+  .shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -460;
+    stroke-width: 5px;
+    fill: transparent;
+    stroke: #000000;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  }
+
+  .text-submit {
+    font-family: 'Oswald' sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 6px;
+    color: #000000;
+    position: relative;
+    top: -40px;
+    left: 1%;
+    width: 300px; 
+    height: 51px;
+  }
+  
+  .name {
+    display: block;
+  }
+
+  .overlay {
+    /* text-transform:uppercase; */
+    font-family: 'oswald';
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 6px;
+    display: none;
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: 3px;
+    left: 30%;
+ 
+    /* letter-spacing: 3px; */
+    background: #FFFFFF;
+    outline: 0; 
+    border: none;
+    border-color: transparent;
+    padding-left: 6px;
+  }
+  .overlay:hover {
+cursor: pointer;
+  }
+
+  .svg-wrapper:hover .shape {
+    stroke-width: 4px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+  }
+  
+  .svg-wrapper:hover .name {
+    display: none;
+  }
+  
+  .svg-wrapper:hover .overlay {
+    display: block;
+  }
+  .processingNotification{
+    display:none; 
+    color: #b64d01; 
+    position: absolute; 
+    left: 40%; 
+    margin-top: 10px;
+  }
+  @media (max-width: 767px) {
+    .left {
+      height: 100%;
+      left: -5%;
+      width: calc(100% );
+ 
+    }
+    .form{
+      padding: 0px 0px 0px 5px;
+    }
+  }
+  /*************right********/
+  .right {
+    background: #474A59;
+    box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+    color: #F1F1F2;
+    position: relative;
+    text-align: center;
+    width: 80%;
+  }
+  @media (max-width: 767px) {
+    .right {
+      flex-shrink: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 350px;
+    }
+  }
+  .title {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 30px 20px 20px;
+    text-transform: uppercase;
+  }
+  .eula {
+    color: #cbcbcb;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px;
+  }
+  .code-container {
+    white-space: pre-line;
+    text-align: left;
+}
+  pre{
+    background-color: #f1f1f1 !important;
+    max-width: inherit;
+   
+    margin:  0!important; 
+    font-size: 0.7rem !important;
+  }
+  code{
+    color: #777777 !important; 
+    
+  }
+  @media (max-width: 767px) {
+    .code {
+      font-size: 9px;
+    }
+  }
+  @media (max-width: 468px) {
+    .code {
+      font-size: 9px;
+    }
+  }
+  @media (max-width: 352px) {
+    .code {
+      font-size: 9px;
+    }
+  }
+  /* .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -17,4 +243,5 @@
     border: 1px solid #888;
     width: 200px;
     text-align: center;
-}
+} */
+
