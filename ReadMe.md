@@ -1,5 +1,12 @@
 ### Commentator
 Commentator is an AI-powered code commentator application designed to assist developers in generating comments for their code automatically. By leveraging generative AI, Commentator utilizes AI techniques to analyze code snippets and provide insightful comments, allowing developers to focus more on writing code logic and reducing the effort required for documenting and explaining their code.
+ <a href="https://github.com/hebertcisco/deploy-python-fastapi-in-vercel/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/hebertcisco/deploy-python-fastapi-in-vercel?style=flat&color=336791" />
+    </a>
+    <a href="https://github.com/hebertcisco/deploy-python-fastapi-in-vercel/pulls">
+      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/hebertcisco/deploy-python-fastapi-in-vercel?style=flat&color=336791" />
+    </a>
+    
 ![Commentator Logo](https://github.com/Stosan/commentator/blob/main/src/static/commentator-logo.png)
 #### Features
 - Automatic code commenting: Commentator uses the generative AI to write comments for code snippets, providing meaningful insights and explanations for developers.
