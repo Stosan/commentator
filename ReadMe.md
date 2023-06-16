@@ -37,7 +37,7 @@ To get started with Commentator, follow these steps:
 - Copy the comments or use them as needed in your code documentation.
 
 
-#### Contributing
+#### 🤝 Contributing
 Contributions to Commentator are welcome! If you encounter any issues or have ideas for enhancements, feel free to submit a pull request or open an issue in the GitHub repository.
 
 When contributing, please adhere to the following guidelines:
@@ -48,8 +48,13 @@ When contributing, please adhere to the following guidelines:
 - Test your changes thoroughly before submitting a pull request.
 
 
-#### Acknowledgments
+### Show your support
+
+Give a ⭐️ if this project helped you!
+
+Or buy me a coffee 🙌🏾
+
 The development of Commentator was inspired by the need to streamline code documentation and make it more efficient for developers.
 
 #### Contact
-For any inquiries or feedback, please reach out to the Commentator deveeloper samkehindeayo@gmail.com.
+For any inquiries or feedback, please reach out to the Commentator developer samkehindeayo@gmail.com.
