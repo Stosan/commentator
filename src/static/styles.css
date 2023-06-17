@@ -34,7 +34,7 @@ justify-content: space-evenly;
     .container {
       flex-direction: column;
       height: 630px;
-      width: 360px;
+      width: 85vw;
     }
   }
 
@@ -171,6 +171,7 @@ cursor: pointer;
     }
     textarea{
       height: calc(50vh / 2);
+      width: 95%;
     }
   }
   /*************right********/
