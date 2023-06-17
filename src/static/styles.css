@@ -163,9 +163,8 @@ cursor: pointer;
   }
   @media (max-width: 767px) {
     .left {
-      height: 70%;
+      height: 75%;
       width: 90vw;
- 
     }
     .form{
       padding: 0px 0px 0px 5px;
