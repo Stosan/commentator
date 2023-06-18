@@ -25,15 +25,18 @@ body{
 
 body {
   width: 100%;
+
 }
 
 .container {
   display: flex;
   height: 90vh;
   margin: 0 auto;
+
   min-width: 95vw;
   font-family: "Oswald", sans-serif;
   
+
 }
 
 /*************left side*****/
@@ -85,6 +88,7 @@ textarea:focus {
   height: 20px;
   margin-bottom: 70px;
   left: calc(2.5%);
+
 }
 
 .shape {
@@ -110,6 +114,7 @@ textarea:focus {
   width: 300px;
   height: 51px;
 }
+
 
 .name {
   display: block;
@@ -214,19 +219,24 @@ pre {
     width: 85vw;
   }
 
+
   .left {
     height: 75%;
     width: 90vw;
   }
+
   
   .form {
     padding: 0px 0px 0px 5px;
   }
 
+
   textarea {
     height: calc(50vh / 2);
     width: 95%;
   }
+
+
 
   .right {
     flex-shrink: 0;
@@ -234,7 +244,39 @@ pre {
     width: 90vw;
     max-height: 600px;
   }
+}
+.title {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 30px 20px 20px;
+  text-transform: uppercase;
+}
+.eula {
+  color: #cbcbcb;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 20px;
+}
+.code-container {
+  white-space: pre-line;
+  text-align: left;
+  width: 100%;
+  height: 500px; /* Adjust the height as needed */
+  overflow: scroll;
+}
+pre {
+  background-color: #f1f1f1 !important;
+  max-width: inherit;
+  color: #777777 !important;
+  margin: 0 !important;
+  font-size: 0.7rem !important;
+}
 
+.code {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 767px) {
   .code {
     font-size: 9px;
   }
