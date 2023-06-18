@@ -21,7 +21,7 @@
     <div class="left">
       <h4>*Commentator supports only functions</h4>
       <div id="processingNotification" class="processingNotification"></div>
-     
+
       <form class="form" id="commentSubmit" method="post" action="/api/v1/generate-comments">
         <div class="wrap-1" style="display: inline-flex;">
 
@@ -59,8 +59,8 @@
       <div class="title">Commentator by Sam Ayo</div>
       <div class="eula">Commentator provides you AI generated comments on your code. <br> So you can focus
         more on writing awesome logics!</div>
-        <div class="code-container">
-        <pre><code id="code-board" class="code"></code></pre> 
+      <div class="code-container">
+        <pre><code id="code-board" class="code"></code></pre>
       </div>
 
     </div>
@@ -114,7 +114,7 @@
               $('#processingNotification').text(`IDAN, the server said: ${xhr.responseText} o`);
               $('#processingNotification').show();
             }
-            
+
           }
         });
       });
