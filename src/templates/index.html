@@ -33,8 +33,9 @@
             <option value="go">Go</option>
             <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
-            <!-- <option value="rust">Rust</option>
-            <option value="typescript">TypeScript</option> -->
+            <!-- <option value="rust">Rust</option> -->
+             <option value="sql">SQL</option>
+            <!--<option value="typescript">TypeScript</option> -->
           </select>
         </div>
         <!-- Code editor textarea -->
@@ -84,10 +85,15 @@
       $("#commentSubmit").submit(function (event) {
         // Prevent default form submission behavior
         event.preventDefault();
+        let payloaddata = {}
         // Get the color input value
         var code = $("#code_body").val();
         var language = $("#language").val();
-        let payloaddata = { 'code_body': code, "language": language }
+        if (language == "sql"){
+          payloaddata = { 'code_body': "sql "+code, "language": language }
+        }else{
+        payloaddata = { 'code_body': code, "language": language }
+        }
         // Show processing notification
         $('#processingNotification').text("Cooking for you IDAN, just chill...");
         $('#processingNotification').show();

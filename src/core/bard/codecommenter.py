@@ -1,4 +1,3 @@
-from fastapi import HTTPException
 from src.utils.languagechecker import detect_programming_language
 from src.utils.removesentence import remove_first_paragraph, remove_last_paragraph
 from src.core.bard.bard import RunBard
@@ -17,6 +16,6 @@ def make_code_comments(userData: dict):
             ls = remove_last_paragraph(fs)
             code_commented_map["result"] = ls
     else:
-        code_commented_map["result"] = "Unknown language."
+        code_commented_map["result"] = "This isn't a function"
 
     return code_commented_map
