@@ -4,7 +4,7 @@ from src.config import appconfig
 
 def RunBard(langtype: str, query: str):
     try:
-        SQL_PROMPT_KEY = f"Generate a comment for this {langtype} query that describes the purpose of the query. The comment should be concise and informative, and it should be placed at the beginning of the query."
+        SQL_PROMPT_KEY = f"Add a concise and informative comment at the beginning of this {langtype} query to describe its purpose. Avoid including examples or additional notes after the commented code."
         PROMPT_KEY = f"PROMPT: Add inline comprehensive commenting to this {langtype} code. Provide a detailed explanation of how the function works as a comment at the top of the function. Avoid including examples of how to use the function, and refrain from adding any additional notes after the commented code."
         code = f'''{query}'''
         if langtype == "SQL":

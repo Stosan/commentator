@@ -16,6 +16,6 @@ def make_code_comments(userData: dict):
             ls = remove_last_paragraph(fs)
             code_commented_map["result"] = ls
     else:
-        code_commented_map["result"] = "This isn't a function"
+        code_commented_map["result"] = "IDAN, how na? This isn't a code for the language selected"
 
     return code_commented_map
