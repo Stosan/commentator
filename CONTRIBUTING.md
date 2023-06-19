@@ -15,10 +15,10 @@ The following is a set of guidelines for contributing to this project. Please ta
 
 ## How Can I Contribute?
 We have the following project ideas
-1. **Mobile rresponsiveness for the UI
-2. **Modernized UI usinng Reactpy
-3. **Modal feedback for users instead of text
-4. **Vscode extension development
+1. **Mobile rresponsiveness for the UI**
+2. **Modernized UI usinng Reactpy**
+3. **Modal feedback for users instead of text**
+4. **Vscode extension development**
   
 There are several ways you can contribute to this project:
 
