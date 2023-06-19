@@ -53,6 +53,7 @@ Contributions to Commentator are welcome! If you encounter any issues or have id
 
 When contributing, please adhere to the following guidelines:
 
+- Check CONTRIBUTINNG.md for project ideas
 - Fork the repository and create your branch from main.
 - Make sure your code follows the established coding style and conventions.
 - Provide clear and descriptive commit messages.
