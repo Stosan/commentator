@@ -14,7 +14,12 @@ The following is a set of guidelines for contributing to this project. Please ta
 - [Community Guidelines](#community-guidelines)
 
 ## How Can I Contribute?
-
+We have the following project ideas
+- *Mobile rresponsiveness for the UI
+- *Modernized UI usinng Reactpy
+- *Modal feedback for users instead of text
+- *Vscode extension development
+  
 There are several ways you can contribute to this project:
 
 - **Code Contributions:** Help us improve the project by contributing code enhancements, bug fixes, or new features.
