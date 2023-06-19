@@ -1,6 +1,6 @@
-# Contributing to [Project Name]
+# Contributing to Commentator
 
-Thank you for considering contributing to [Project Name]! We appreciate your interest in making this project better.
+Thank you for considering contributing to [Commentator]! We appreciate your interest in making this project better.
 
 The following is a set of guidelines for contributing to this project. Please take a moment to review these guidelines before making any contributions.
 
@@ -70,5 +70,5 @@ In addition to the technical guidelines, please adhere to the following communit
 3. Help create an inclusive and welcoming environment for all contributors.
 4. Avoid posting spam, offensive content, or unrelated topics.
 
-Thank you for your contributions and helping to make [Project Name] better! We appreciate your support and look forward to your participation.
+Thank you for your contributions and helping to make commentator better! We appreciate your support and look forward to your participation.
 
