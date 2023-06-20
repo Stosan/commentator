@@ -1,3 +1,4 @@
 comenv/
 *.pyc
 .env
+code-commentator/
