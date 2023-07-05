@@ -52,7 +52,7 @@ justify-content: space-evenly;
  
   .left >h4{
     text-align: center;
-   
+   color:rgb(106, 4, 4)
   }
   .form {
 margin: 0 auto;

@@ -8,8 +8,9 @@ router = APIRouter()
 @router.post("/generate-comments")
 def create_code_comment(user_data: dict):
     resp=make_code_comments(user_data)
-    if resp["result"] == "Unknown language.":
-        return Response(content=resp["result"], status_code=400)
-    return Response(content=resp["result"], status_code=200)
+    if resp is not None:
+        if resp["result"] == "Unknown language.":
+            return Response(content=resp["result"], status_code=400)
+    return resp
 
 
