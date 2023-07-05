@@ -12,6 +12,15 @@
   <!-- <link rel="stylesheet" href="{{ url_for('static', path='prism.css') }}"> -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SJFJPDKME4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SJFJPDKME4');
+</script>
 </head>
 
 <body>
@@ -21,7 +30,7 @@
     <div class="left">
       <h4 style="color: rgb(173, 4, 4);">*Commentator supports only functions</h4>
       <div id="processingNotification" class="processingNotification"></div>
-     
+
       <form class="form" id="commentSubmit" method="post" action="/api/v1/generate-comments">
         <div class="wrap-1" style="display: inline-flex;">
 
@@ -33,10 +42,12 @@
             <option value="go">Go</option>
             <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
-            <!-- <option value="rust">Rust</option>
-                        <option value="typescript">TypeScript</option> -->
+            <!-- <option value="rust">Rust</option> -->
+             <option value="sql">SQL</option>
+            <!--<option value="typescript">TypeScript</option> -->
           </select>
         </div>
+        <!-- Code editor textarea -->
         <div class="wrap-1">
           <div for="code" class="text name">Code:</div>
           <textarea id="code_body" placeholder="a sample could be: 
@@ -59,8 +70,8 @@
       <div class="title">Commentator by Sam Ayo</div>
       <div class="eula">Commentator provides you AI generated comments on your code. <br> So you can focus
         more on writing awesome logics!</div>
-        <div class="code-container">
-        <pre><code id="code-board" class="code"></code></pre> 
+      <div class="code-container">
+        <pre><code id="code-board" class="code"></code></pre>
       </div>
 
     </div>
@@ -83,10 +94,15 @@
       $("#commentSubmit").submit(function (event) {
         // Prevent default form submission behavior
         event.preventDefault();
+        let payloaddata = {}
         // Get the color input value
         var code = $("#code_body").val();
         var language = $("#language").val();
-        let payloaddata = { 'code_body': code, "language": language }
+        if (language == "sql"){
+          payloaddata = { 'code_body': "sql "+code, "language": language }
+        }else{
+        payloaddata = { 'code_body': code, "language": language }
+        }
         // Show processing notification
         $('#processingNotification').text("Cooking for you IDAN, just chill...");
         $('#processingNotification').show();
@@ -114,7 +130,7 @@
               $('#processingNotification').text(`IDAN, the server said: ${xhr.responseText} o`);
               $('#processingNotification').show();
             }
-            
+
           }
         });
       });

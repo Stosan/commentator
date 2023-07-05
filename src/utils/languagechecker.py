@@ -16,6 +16,8 @@ def detect_programming_language(function: str) -> str:
         return "Go"
     elif re.search(r"^func", function):
         return "Go"
+    elif re.search(r"^sql", function):
+        return "SQL"
     
 
     return "Unknown"
